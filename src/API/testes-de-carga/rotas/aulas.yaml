@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:5500"
+  phases:
+    - duration: 60
+      arrivalRate: 20
+      rampTo: 150
+scenarios:
+  - flow:
+      - post:
+          url: "/aulas"
+          json:
+            data: "2024/10/05"
+            duracao: 2
+            id_turma: 1
